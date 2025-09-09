@@ -8,8 +8,7 @@ document.querySelector("#search").addEventListener("submit", async (event) => {
         showAlert("Você precisa digitar uma cidade!")
         return;
     }
-    //Netlify env variable
-    const apiKey = process.env.API_KEY;
+    const apiKey = "d72244629763214b83a3e86d4820433c"
     const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(cityName)}&appid=${apiKey}&units=metric&lang=lang=pt_br`
 
     const results = await fetch(apiURL);
